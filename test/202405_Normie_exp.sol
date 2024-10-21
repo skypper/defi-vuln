@@ -21,7 +21,7 @@ contract NormieExploit is Test {
     address NORMIE = 0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200;
 
     function setUp() public {
-        vm.createSelectFork("https://base.llamarpc.com", 14952783 - 1);
+        vm.createSelectFork(vm.envString("BASE_RPC_URL"), 14952783 - 1);
     }
 
     function testExploit() public {
